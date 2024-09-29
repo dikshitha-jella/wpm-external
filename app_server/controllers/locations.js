@@ -121,16 +121,48 @@ const locationInfo = (req, res) => {
 
 
 
+
 // Add Review Page
 const addReview = (req, res) => {
   res.render('location-review-form.jade', {
     title: 'Review on HMS',
-    pageHeader: { title: 'Add Your Review' }
+    pageHeader: { title: 'Add my Review' }
+  });
+};
+// Handle Review Submission
+const submitReview = (req, res) => {
+  // You can log the review details for now (or store them in a database when ready)
+  console.log('Review submitted:', req.body);
+  
+  // Redirect to the home page after submission
+  res.redirect('/');
+};
+
+
+
+// Add Appointment Page
+const addAppointment = (req, res) => {
+  res.render('location-appointment-form.jade', {
+    title: 'Book an Appointment',
+    pageHeader: { title: 'Book an Appointment' }
   });
 };
 
+// Handle Appointment Submission
+const submitAppointment = (req, res) => {
+  // Log appointment details for now (or store them in a database when ready)
+  console.log('Appointment booked:', req.body);
+  
+  // Redirect to the home page after submission
+  res.redirect('/');
+};
+
+// Export your functions
 module.exports = {
   homelist,
   locationInfo,
-  //addReview
+  addReview,
+  submitReview,
+  addAppointment, // Add this line
+  submitAppointment // Add this line
 };

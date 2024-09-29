@@ -18,6 +18,25 @@ const reviewSchema = new mongoose.Schema({
   reviewText: String,
   createdOn: { type: Date, default: Date.now }
 });
+// Create Appointment Schema
+const appointmentSchema = new Schema({
+  name: {
+    type: String,
+    required: true,
+  },
+  date: {
+    type: Date,
+    required: true,
+  },
+  time: {
+    type: String, // Use String for time; you can adjust based on your format
+    required: true,
+  },
+  reason: {
+    type: String,
+    required: true,
+  },
+});
 
 const locationSchema = new mongoose.Schema({
   name: { type: String, required: true },
@@ -35,8 +54,15 @@ const locationSchema = new mongoose.Schema({
   },
   
   openingTimes: [openingTimeSchema],
-  reviews: [reviewSchema]
+  reviews: [reviewSchema],
+  appointments:[appointmentSchema]
 });
+
+
+
+
+
+
 mongoose.model('Location', locationSchema);
 locationSchema.index({ coords: '2dsphere' });
 

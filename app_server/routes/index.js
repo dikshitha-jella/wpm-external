@@ -21,7 +21,13 @@ router.get('/', ctrlLocations.homelist);
 router.get('/location/:name', ctrlLocations.locationInfo);
 
 // Update this route to include the locationId for adding a review
-//router.get('/location/review/new', ctrlLocations.addReview);
+router.get('/location/review/new', ctrlLocations.addReview);
+router.post('/location/review', ctrlLocations.submitReview);
+
+router.get('/location/appointment/new', ctrlLocations.addAppointment);
+
+// Route to handle appointment submission
+router.post('/location/appointment', ctrlLocations.submitAppointment); 
 
 /* Other pages */
 router.get('/about', ctrlOthers.about);
