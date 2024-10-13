@@ -1,101 +1,115 @@
 const locations = [
   {
-    name: 'City Health Hospital',
-    address: '4-106/C, Annojiguda, Hyderabad, Telangana 501301',
-    rating: 3,
-    facilities: ['Emergency care', 'Surgery', 'Pharmacy'],
+    name: 'FreshMart',
+    address: '123 Greenway Ave, Hyderabad, Telangana 500001',
+    rating: 4,
+    facilities: ['Fresh Produce', 'Bakery', 'Dairy'],
     coords: { lat: 51.455041, lng: -0.9690884 },
     openingTimes: [
-      { days: 'Monday - Sunday', opening: '24/7', closed: false }
+      { days: 'Monday - Sunday', opening: '7:00am', closing: '10:00pm', closed: false }
     ],
     reviews: [
-      { author: 'Nani Nalli', rating: 5, timestamp: '2013-07-16', reviewText: 'I recently visited City Health Hospital and had a largely positive experience. The hospital was clean and well-organized.' },
-      { author: 'Bala Subhramanyam', rating: 3, timestamp: '2013-06-16', reviewText: 'Convenient location, but the waiting time was a bit long.' }
-    ]
+      { author: 'Aisha Khan', rating: 5, timestamp: '2023-07-16', reviewText: 'Great selection of fresh fruits and vegetables!' },
+      { author: 'Raj Patel', rating: 4, timestamp: '2023-06-16', reviewText: 'Nice store, but can get crowded during weekends.' }
+    ],
+    gmail: 'freshmart@example.com',
+    phno: '9876543210'
   },
   {
-    name: 'Metro Medical Centre',
-    address: '3-99/1, Chengicherla Road, Beside Mahadev Jewellers, Chengicherla, Hyderabad, Telangana 500092',
+    name: 'Daily Essentials Store',
+    address: '45 Market St, Hyderabad, Telangana 500002',
     rating: 4,
-    facilities: ['Outpatient services', 'Diagnostics', 'Immunizations'],
+    facilities: ['Grocery Staples', 'Snacks', 'Beverages'],
     coords: { lat: 51.456042, lng: -0.970088 },
     openingTimes: [
-      { days: 'Monday - Sunday', opening: '24/7', closed: false }
+      { days: 'Monday - Sunday', opening: '6:00am', closing: '11:00pm', closed: false }
     ],
     reviews: [
-      { author: 'Shreyansh', rating: 4, timestamp: '2013-07-20', reviewText: 'Great services and quick response times!' },
-      { author: 'Mouli', rating: 2, timestamp: '2013-06-25', reviewText: 'Good hospital, but sometimes feels understaffed during peak hours.' }
-    ]
+      { author: 'Sonia Mehta', rating: 4, timestamp: '2023-07-20', reviewText: 'Convenient place for quick shopping!' },
+      { author: 'Vikram Rao', rating: 3, timestamp: '2023-06-25', reviewText: 'Good variety, but prices can be higher than expected.' }
+    ],
+    gmail: 'dailyessentials@example.com',
+    phno: '9123456780'
   },
   {
-    name: 'HealthFirst Hospital',
-    address: 'Kamala Nagar Main Rd, Vikarabad, Telangana',
+    name: 'Healthy Foods Market',
+    address: '78 Organic Lane, Hyderabad, Telangana 500003',
     rating: 5,
-    facilities: ['Emergency care', 'Vaccination services', 'Health screenings'],
+    facilities: ['Organic Products', 'Health Foods', 'Vegan Options'],
     coords: { lat: 51.457042, lng: -0.971088 },
     openingTimes: [
-      { days: 'Monday - Sunday', opening: '24/7', closed: false }
+      { days: 'Monday - Sunday', opening: '7:00am', closing: '9:00pm', closed: false }
     ],
     reviews: [
-      { author: 'Srinivas', rating: 5, timestamp: '2013-08-10', reviewText: 'A great hospital with professional staff.' },
-      { author: 'Karthikeya', rating: 4, timestamp: '2013-08-15', reviewText: 'Quick service and reasonable prices for treatments.' }
-    ]
+      { author: 'Suresh Gupta', rating: 5, timestamp: '2023-08-10', reviewText: 'Best place for organic food lovers!' },
+      { author: 'Priya Singh', rating: 4, timestamp: '2023-08-15', reviewText: 'Quality products but a bit pricey.' }
+    ],
+    gmail: 'healthyfoods@example.com',
+    phno: '8765432109'
   },
   {
-    name: 'CarePlus Hospital',
-    address: '162, Korremula Road, OU Colony, Chowdhariguda, Hyderabad, Telangana 500088',
-    rating: 4,
-    facilities: ['Chronic disease management', 'Surgery', 'Medical equipment rental'],
+    name: 'Local Grocery Stop',
+    address: '200 City Center Rd, Hyderabad, Telangana 500004',
+    rating: 3,
+    facilities: ['General Groceries', 'Household Items', 'Personal Care'],
     coords: { lat: 51.458042, lng: -0.972088 },
     openingTimes: [
-      { days: 'Monday - Sunday', opening: '24/7', closed: false }
+      { days: 'Monday - Sunday', opening: '8:00am', closing: '10:00pm', closed: false }
     ],
     reviews: [
-      { author: 'Pranay Reddy', rating: 4, timestamp: '2013-09-12', reviewText: 'Nice and clean hospital. The staff is very polite.' },
-      { author: 'Koushik Reddy', rating: 3, timestamp: '2013-09-18', reviewText: 'Good healthcare options, but a bit crowded.' }
-    ]
+      { author: 'Arjun Verma', rating: 3, timestamp: '2023-09-10', reviewText: 'Average store with decent options.' },
+      { author: 'Neha Reddy', rating: 2, timestamp: '2023-09-12', reviewText: 'Limited variety and stock issues sometimes.' }
+    ],
+    gmail: 'localgrocery@example.com',
+    phno: '7654321098'
   },
   {
-    name: 'PrimeCare Hospital',
-    address: 'Door No 5/123/1, Shop No 2, Boduppal Rd, Peerzadiguda, Buddha Nagar, Hyderabad, Telangana 500039',
-    rating: 3,
-    facilities: ['Emergency services', 'Medication therapy management', 'Patient transfers'],
+    name: 'Veggie Delight',
+    address: '34 Greenfield Blvd, Hyderabad, Telangana 500005',
+    rating: 5,
+    facilities: ['Vegetarian Products', 'Organic Produce', 'Local Goods'],
     coords: { lat: 51.459042, lng: -0.973088 },
     openingTimes: [
-      { days: 'Monday - Sunday', opening: '24/7', closed: false }
+      { days: 'Monday - Saturday', opening: '7:00am', closing: '9:00pm', closed: false },
+      { days: 'Sunday', opening: '8:00am', closing: '8:00pm', closed: false }
     ],
     reviews: [
-      { author: 'Akash', rating: 3, timestamp: '2013-10-20', reviewText: 'The staff is very knowledgeable and caring.' },
-      { author: 'Tej', rating: 4, timestamp: '2013-10-25', reviewText: 'Good prices on treatments. Sometimes they run out of stock on popular items.' }
-    ]
+      { author: 'Meera Sharma', rating: 5, timestamp: '2023-09-15', reviewText: 'Excellent variety of vegetarian options!' },
+      { author: 'Nitin Kumar', rating: 4, timestamp: '2023-09-20', reviewText: 'Love the organic section and fresh local produce.' }
+    ],
+    gmail: 'veggiedelight@example.com',
+    phno: '8765432100'
   },
   {
-    name: 'Community Care Hospital',
-    address: 'D.No.1 and 2, Nadergul X Roads, Village, Nadargul, Telangana',
-    rating: 5,
-    facilities: ['Travel vaccinations', 'Health consultations', 'Compounding services'],
-    coords: { lat: 51.461042, lng: -0.975088 },
+    name: 'SuperMart Express',
+    address: '99 Quick Lane, Hyderabad, Telangana 500006',
+    rating: 4,
+    facilities: ['Fast Checkout', 'Delivery Service', 'Self-Service Kiosks'],
+    coords: { lat: 51.460042, lng: -0.974088 },
     openingTimes: [
       { days: 'Monday - Sunday', opening: '24/7', closed: false }
     ],
     reviews: [
-      { author: 'Harsha', rating: 5, timestamp: '2013-12-02', reviewText: 'Great experience! The hospital is modern and well-equipped.' },
-      { author: 'Shannu', rating: 4, timestamp: '2013-12-10', reviewText: 'I trust this hospital for all my health needs.' }
-    ]
+      { author: 'Rahul Desai', rating: 4, timestamp: '2023-10-01', reviewText: 'Great for late-night shopping and quick pickups.' },
+      { author: 'Anjali Verma', rating: 5, timestamp: '2023-10-05', reviewText: 'Fast service and a good selection of products.' }
+    ],
+    gmail: 'supermartexpress@example.com',
+    phno: '9998765432'
   }
 ];
+
 
 
 // Home List Route
 const homelist = (req, res) => {
   res.render('locations-list', {
-    title: 'Health Locator - Find Your Nearest Hospital, Anytime, Anywhere',
+    title: 'Online Grocery Store',
     pageHeader: {
-      title: 'Health Locator',
-      strapline: 'Find Your Nearest Hospital, Anytime, Anywhere',
+      title: 'Online Grocey Store',
+      strapline: 'Hunt your grocery needs!'
     },
-    sidebar: "Searching for a hospital with great facilities? Our Hospital Locator helps you find the best spots for all your medical needs...",
-    locations: locations, // Use the locations array directly
+    sidebar: "Searching for a grocery store with great facilities? Our Grocery Locator helps you find the best spots for all your grocery needs...",
+    locations: locations
   });
 };
 
@@ -112,8 +126,8 @@ const locationInfo = (req, res) => {
     title: location.name,
     pageHeader: { title: location.name },
     sidebar: {
-      context: `${location.name} is on Health Locator because it has great services and accessible facilities.`,
-      callToAction: 'If you\'ve been and you like it - or if you don\'t - please leave a review to help other people just like you.',
+      context: `is part of Onile Groceries because it offers a variety of products including grocery essentials.`,
+      callToAction: `To Contact Us:\nGmail: ${location.gmail}\nPhone: ${location.phno}`
     },
     location: location
   });

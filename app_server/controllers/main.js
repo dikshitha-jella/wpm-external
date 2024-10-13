@@ -1,6 +1,6 @@
 /* GET homepage */
 const index = (req, res) => {
-    res.render('index', { title: 'AMS' });
+    res.render('index', { title: 'Online Groceries' });
     };
     module.exports = {
         index
